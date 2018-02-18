@@ -1,6 +1,14 @@
 <h2 style="color:red">
   List of courses !
 </h2>
-  <ul>
-      <li *ngFor="let course of courses">{{course}}</li>
-  </ul>
+<button class="btn btn-danger">Save</button>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+  </tr>
+  <tr *ngFor="let course of courses">
+    <td>{{courses.indexOf(course)+1}}</td>
+      <td>{{course }}</td>
+    </tr>
+    </table>

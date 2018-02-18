@@ -7,7 +7,8 @@ import { CoursesService } from '../courses.service';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-
+ counter=0;
+ getCounter(){return this.counter++;}
   constructor(service:CoursesService) { 
 
     this.courses= service.getCourses();
