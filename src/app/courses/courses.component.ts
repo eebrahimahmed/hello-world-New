@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../courses.service';
+import { Alert, Button } from 'selenium-webdriver';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-courses',
@@ -7,15 +9,25 @@ import { CoursesService } from '../courses.service';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
- counter=0;
- getCounter(){return this.counter++;}
+ 
   constructor(service:CoursesService) { 
-
+    
     this.courses= service.getCourses();
   }
-
+//#region Events
   ngOnInit() {
   }
+  onSave(btnSave)
+  {
+   // console.log ("Message", btnSave );
+  }
+  email="eebrahim.ahmed@gmail.com";
+  onInputKeyUp()
+  {
+    
+    alert(this.email);
+  }
+  //#endregion
 
 
   //#region Proprieties
