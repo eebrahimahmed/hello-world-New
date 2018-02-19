@@ -9,12 +9,12 @@ export class CourseComponent implements OnInit {
   
   constructor() 
   {
-    this.title="C# Development Course";
+    this.title="C# Development Course C# Development Course";
    }
 
 
  //#region Events
-  
+
  ngOnInit() {
 }
 //#endregion
