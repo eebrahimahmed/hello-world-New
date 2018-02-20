@@ -1,4 +1,28 @@
+<<<<<<< HEAD
 <h2 style="color:red">Courses works!</h2>
 <ul>
   <li class="btn btn-success" [style.color]="isActive" *ngFor="let course of courses">{{course}}</li>
 </ul>
+=======
+<h2 style="color:red">
+  List of courses !
+</h2>
+<button class="btn btn-danger">Save</button>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Action</td>
+    <td>Input</td>
+  </tr>
+  <tr *ngFor="let course of courses">
+    <td>{{courses.indexOf(course)+1}}</td>
+      <td>{{course }}</td>
+      <td><button class="btn btn-success" (click)="onSave()">Save</button></td>
+     
+      <td><input [(ngModel)]="email" uppercase  (keyup.enter)="onInputKeyUp()"/>{{email | uppercase}}</td>
+
+    </tr>
+    </table>
+    <favorite></favorite>
+>>>>>>> 0e5e0da901122cbbfe3518f7e004555e575978a5
