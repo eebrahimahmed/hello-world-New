@@ -7,11 +7,8 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './courses.service';
-<<<<<<< HEAD
-=======
 import { SummeryPipe } from './summery.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
->>>>>>> 0e5e0da901122cbbfe3518f7e004555e575978a5
 
 
 @NgModule({
