@@ -28,6 +28,10 @@ export class CoursesComponent implements OnInit {
   //#region Events
   ngOnInit() {
   }
+  onFavChanged()
+  {
+    alert("Favorite changed");
+  }
   onSave(btnSave) {
     // console.log ("Message", btnSave );
   }
