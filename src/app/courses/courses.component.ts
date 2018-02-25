@@ -6,7 +6,7 @@ import { EmailService } from '../email.service';
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  styleUrls: ['./courses.component.css','../../../node_modules/bootstrap/dist/fonts/fontawesome.min.css']
 })
 export class CoursesComponent implements OnInit {
 

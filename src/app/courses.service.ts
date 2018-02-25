@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -12,12 +11,3 @@ export class CoursesService {
   }
 
 }
-=======
-export class CoursesService
-{
-    getCourses()
-    {
-        return ["C#", "Js","ASP","Java"];
-    }
-}
->>>>>>> 0e5e0da901122cbbfe3518f7e004555e575978a5
