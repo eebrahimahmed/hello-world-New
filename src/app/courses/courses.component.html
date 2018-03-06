@@ -27,19 +27,10 @@
     <td>
       <button class="btn btn-success" (click)="onSave()">Save</button>
     </td>
-<<<<<<< HEAD
-    <td>
-      <input [(ngModel)]="email" uppercase (keyup.enter)="onInputKeyUp()" /> {{email | uppercase}}
-    </td>
-    <td><favorite [is-favorite]="false" (change)="onFavChanged()"></favorite></td>
-  </tr>
-</table>
-=======
 
     <td>
       <input [(ngModel)]="email" uppercase (keyup.enter)="onInputKeyUp()" />{{email | uppercase}}</td>
-
+<td><favorite [is-favorite]="false" (change)="onFavChanged()"></favorite></td>
   </tr>
 </table>
-<favorite [is-favorite]="false" (change)="onFavChanged()"></favorite>
->>>>>>> 8c500eb501c647c1a6f61a3d3e39e4b95de738b1
+

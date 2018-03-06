@@ -26,13 +26,26 @@ export class FavoriteComponent implements OnInit {
     this._isSelected = value;
 
     if (value === false)
-      this.favIcone = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mw-watch-icon.svg/2000px-Mw-watch-icon.svg.png";
-    else
-      this.favIcone = "https://cdn2.iconfinder.com/data/icons/crystalproject/crystal_project_256x256/apps/keditbookmarks.png";
-
+     {
+       this.favIcone = "red";
+       this.border= "0px";
+     }
+    else{
+      this.favIcone = "gray";
+      this.border= "2px";
+    }
     
   }
 
+  
+  private _border : string;
+  public get border() : string {
+    return this._border;
+  }
+  public set border(v : string) {
+    this._border = v;
+  }
+  
 
   private _favIcone: string;
   public get favIcone(): string {
