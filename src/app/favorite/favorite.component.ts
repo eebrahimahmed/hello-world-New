@@ -22,10 +22,10 @@ export class FavoriteComponent implements OnInit {
   }
   @Output() change = new EventEmitter();
 
-  @Input('is-favorite') public set  isSelected(v: boolean) {
-    this._isSelected = v;
+  @Input('is-favorite') public set  isSelected(value: boolean) {
+    this._isSelected = value;
 
-    if (v === false)
+    if (value === false)
       this.favIcone = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mw-watch-icon.svg/2000px-Mw-watch-icon.svg.png";
     else
       this.favIcone = "https://cdn2.iconfinder.com/data/icons/crystalproject/crystal_project_256x256/apps/keditbookmarks.png";

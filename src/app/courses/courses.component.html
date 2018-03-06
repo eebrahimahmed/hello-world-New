@@ -2,10 +2,21 @@
   List of courses !
 </h2>
 <button class="btn btn-danger">Save</button>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<div class="fa-4x">
+  <span class="fa-layers fa-fw" style="background:MistyRose">
+    <i class="fa fa-envelope"></i>
+    <span class="fa-layers-counter" style="background:Tomato">1,419</span>
+  </span>
+</div>
 <table>
   <tr>
     <td>ID</td>
-    <td>Name</td>
+    <td>Name
+
+
+    </td>
     <td>Action</td>
     <td>Input</td>
     <td>Like</td>
@@ -16,9 +27,19 @@
     <td>
       <button class="btn btn-success" (click)="onSave()">Save</button>
     </td>
+<<<<<<< HEAD
     <td>
       <input [(ngModel)]="email" uppercase (keyup.enter)="onInputKeyUp()" /> {{email | uppercase}}
     </td>
     <td><favorite [is-favorite]="false" (change)="onFavChanged()"></favorite></td>
   </tr>
 </table>
+=======
+
+    <td>
+      <input [(ngModel)]="email" uppercase (keyup.enter)="onInputKeyUp()" />{{email | uppercase}}</td>
+
+  </tr>
+</table>
+<favorite [is-favorite]="false" (change)="onFavChanged()"></favorite>
+>>>>>>> 8c500eb501c647c1a6f61a3d3e39e4b95de738b1
