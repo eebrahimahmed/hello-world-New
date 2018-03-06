@@ -30,7 +30,7 @@ export class CoursesComponent implements OnInit {
   }
   onFavChanged()
   {
-    alert("Favorite changed");
+    console.log("Favorite changed");
   }
   onSave(btnSave) {
     // console.log ("Message", btnSave );

@@ -8,14 +8,17 @@
     <td>Name</td>
     <td>Action</td>
     <td>Input</td>
+    <td>Like</td>
   </tr>
   <tr *ngFor="let course of courses">
     <td>{{courses.indexOf(course)+1}}</td>
-      <td>{{course }}</td>
-      <td><button class="btn btn-success" (click)="onSave()">Save</button></td>
-     
-      <td><input [(ngModel)]="email" uppercase  (keyup.enter)="onInputKeyUp()"/>{{email | uppercase}}</td>
-
-    </tr>
-    </table>
-    <favorite [is-favorite]="false" (change)="onFavChanged()"></favorite>
+    <td>{{course }}</td>
+    <td>
+      <button class="btn btn-success" (click)="onSave()">Save</button>
+    </td>
+    <td>
+      <input [(ngModel)]="email" uppercase (keyup.enter)="onInputKeyUp()" /> {{email | uppercase}}
+    </td>
+    <td><favorite [is-favorite]="false" (change)="onFavChanged()"></favorite></td>
+  </tr>
+</table>
