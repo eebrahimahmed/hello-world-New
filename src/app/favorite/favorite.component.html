@@ -1,3 +1,8 @@
-<i class="fa fa-heart" style="border-color:black" [style.color] = "favIcone" [style.border]="border" (click)="onClick()"></i>
+<i 
+class="fa fa-heart"
+style="border-color:black" 
+[style.color] = "this.isSelected?'red':'gray'"
+  (click)="onClick()">
+</i>
 
 <!-- <img width="32px" height="32px" class="fas fa-heart"  [src]="favIcone" (click)="onClick()"/> -->

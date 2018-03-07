@@ -23,18 +23,7 @@ export class FavoriteComponent implements OnInit {
   @Output() change = new EventEmitter();
 
   @Input('is-favorite') public set  isSelected(value: boolean) {
-    this._isSelected = value;
-
-    if (value === false)
-     {
-       this.favIcone = "red";
-       this.border= "0px";
-     }
-    else{
-      this.favIcone = "gray";
-      this.border= "2px";
-    }
-    
+    this._isSelected = value;    
   }
 
   
@@ -46,18 +35,7 @@ export class FavoriteComponent implements OnInit {
     this._border = v;
   }
   
-
-  private _favIcone: string;
-  public get favIcone(): string {
-    return this._favIcone;
-  }
-
-  public set favIcone(v: string) {
-    this._favIcone = v;
-  }
-
   onClick() {
-
     this.isSelected = !this.isSelected; 
      this.change.emit();
   }
