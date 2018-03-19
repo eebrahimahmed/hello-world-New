@@ -10,27 +10,32 @@
     <span class="fa-layers-counter" style="background:Tomato">1,419</span>
   </span>
 </div>
-<table>
-  <tr>
-    <td>ID</td>
-    <td>Name
+<div *ngIf="courses.length > 0 ; then coursesTemp else noCourses"></div>
+<ng-template #coursesTemp>
+  <table>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Action</td>
+      <td>Input</td>
+      <td>Like</td>
+    </tr>
 
+    <tr *ngFor="let course of courses">
+      <td>{{courses.indexOf(course)+1}}</td>
+      <td>{{course }}</td>
+      <td>
+        <button class="btn btn-success" (click)="onSave()">Save</button>
+      </td>
+      <td>
+        <input [(ngModel)]="email" uppercase (keyup.enter)="onInputKeyUp()" />{{email | uppercase}}</td>
+      <td>
+        <favorite [is-favorite]="false" (change)="onFavChanged()"></favorite>
+      </td>
+    </tr>
+  </table>
+</ng-template>
 
-    </td>
-    <td>Action</td>
-    <td>Input</td>
-    <td>Like</td>
-  </tr>
-  <tr *ngFor="let course of courses">
-    <td>{{courses.indexOf(course)+1}}</td>
-    <td>{{course }}</td>
-    <td>
-      <button class="btn btn-success" (click)="onSave()">Save</button>
-    </td>
-
-    <td>
-      <input [(ngModel)]="email" uppercase (keyup.enter)="onInputKeyUp()" />{{email | uppercase}}</td>
-<td><favorite [is-favorite]="false" (change)="onFavChanged()"></favorite></td>
-  </tr>
-</table>
-
+<ng-template #noCourses>
+  <Div class="card card-Header" > No Courses </Div>
+</ng-template>
