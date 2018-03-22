@@ -10,6 +10,7 @@ import { CoursesService } from './courses.service';
 import { SummeryPipe } from './summery.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { bootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
+import { ItemsNavigationComponent } from './items-navigation/items-navigation.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { bootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
     CourseComponent,
     SummeryPipe,
     FavoriteComponent,
-    bootstrapPanelComponent
+    bootstrapPanelComponent,
+    ItemsNavigationComponent
   ],
   imports: [
     BrowserModule,

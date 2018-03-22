@@ -12,17 +12,17 @@
 </div>
 <div *ngIf="courses.length > 0 ; then coursesTemp else noCourses"></div>
 <ng-template #coursesTemp>
-  <table>
-    <tr>
-      <td>ID</td>
-      <td>Name</td>
-      <td>Action</td>
-      <td>Input</td>
-      <td>Like</td>
+  <table class="table table-striped">
+    <tr class="thead-dark">
+      <th scope="row">ID</th>
+      <th>Name</th>
+      <th>Action</th>
+      <th>Input</th>
+      <th>Like</th>
     </tr>
 
-    <tr *ngFor="let course of courses">
-      <td>{{courses.indexOf(course)+1}}</td>
+    <tr *ngFor="let course of courses;index as i">
+      <th scope="row">{{i+1}}</th>
       <td>{{course }}</td>
       <td>
         <button class="btn btn-success" (click)="onSave()">Save</button>
@@ -37,5 +37,5 @@
 </ng-template>
 
 <ng-template #noCourses>
-  <Div class="card card-Header" > No Courses </Div>
+  <Div class="card card-Header"> No Courses </Div>
 </ng-template>

@@ -1,4 +1,5 @@
-<div class="card" style="width: 18rem;">
+<button (click)="hideShowContent()">Show/Hide</button>
+<div class="card" [hidden]="!isShow" style="width: 18rem;">
   <div class="card-header">
     <ng-content select=".heading"></ng-content>
   </div>

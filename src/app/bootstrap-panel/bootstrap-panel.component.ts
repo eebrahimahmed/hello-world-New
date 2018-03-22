@@ -6,11 +6,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./bootstrap-panel.component.css'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class bootstrapPanelComponent implements OnInit {
+export class bootstrapPanelComponent {
 
   constructor() { }
 
-  ngOnInit() {
+  public isShow = true;
+
+  public hideShowContent () {
+    this.isShow = !this.isShow;
   }
 
 }
