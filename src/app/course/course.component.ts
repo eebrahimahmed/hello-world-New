@@ -10,8 +10,17 @@ export class CourseComponent implements OnInit {
   constructor() 
   {
     this.title="C# Development Course C# Development Course";
+    this.email="eebrahim.ahmed@gmail.com"
    }
 
+
+private _email : string;
+public get email() : string {
+  return this._email;
+}
+public set email(v : string) {
+  this._email = v;
+}
 
  //#region Events
 

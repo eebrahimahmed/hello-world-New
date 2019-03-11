@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input,Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -9,35 +9,40 @@ import { Component, OnInit ,Input,Output, EventEmitter} from '@angular/core';
 export class FavoriteComponent implements OnInit {
 
   constructor() {
-    
+
   }
 
   ngOnInit() {
   }
 
-
+  //#region Inputs And Outputs
   private _isSelected: boolean;
   public get isSelected(): boolean {
     return this._isSelected;
   }
-  @Output() change = new EventEmitter();
-
-  @Input('is-favorite') public set  isSelected(value: boolean) {
-    this._isSelected = value;    
+  @Input('is-favorite')
+  public set isSelected(value: boolean) {
+    this._isSelected = value;
   }
 
-  
-  private _border : string;
-  public get border() : string {
+  // Output
+  @Output() change = new EventEmitter();
+  //#endregion
+
+  private _border: string;
+  public get border(): string {
     return this._border;
   }
-  public set border(v : string) {
+  public set border(v: string) {
     this._border = v;
   }
-  
+
+
+  //#region Events
   onClick() {
-    this.isSelected = !this.isSelected; 
-     this.change.emit();
+    this.isSelected = !this.isSelected;
+    this.change.emit();
   }
+  //#endregion
 
 }

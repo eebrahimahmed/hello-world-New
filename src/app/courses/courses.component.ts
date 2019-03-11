@@ -16,11 +16,11 @@ export class CoursesComponent implements OnInit {
     this.courses = service.getCourses();
   }
 
-  private _courses: string[];
-  public get courses(): string[] {
+  private _courses: any[];
+  public get courses(): any[] {
     return this._courses;
   }
-  public set courses(v: string[]) {
+  public set courses(v: any[]) {
     this._courses = v;
   }
 
@@ -28,17 +28,16 @@ export class CoursesComponent implements OnInit {
   //#region Events
   ngOnInit() {
   }
-  onFavChanged()
-  {
+  onFavChanged() {
     console.log("Favorite changed");
   }
   onSave(btnSave) {
     // console.log ("Message", btnSave );
   }
-  email = "eebrahim.ahmed@gmail.com";
-  onInputKeyUp() {
-
-    alert(this.email);
+  //email = "eebrahim.ahmed@gmail.com";
+  onInputKeyUp($event) {
+    console.log(this.courses);
+    alert($event.target.value);
   }
   //#endregion
 }

@@ -7,7 +7,8 @@ export class CoursesService {
 
   public getCourses()
   {
-    return ["Course1","Course2","Course3","Course4"];
+    return [{email:'eebrahim.ahmed@gmail.com', title:'Course1'} ,{email:'eebrahim.ahmed@gmail.com',title:'Course2'},
+    {email:'eebrahim.ahmed@gmail.com', title:'Course3'} ,{email:'eebrahim.ahmed@gmail.com',title:'Course4'}];
   }
 
 }

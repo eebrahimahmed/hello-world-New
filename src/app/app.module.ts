@@ -11,6 +11,12 @@ import { SummeryPipe } from './summery.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { bootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { ItemsNavigationComponent } from './items-navigation/items-navigation.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { RecipeDetailsComponent } from './recipe-list/recipe-details/recipe-details.component';
+import { RecipeEditComponent } from './recipe-list/recipe-edit/recipe-edit.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -21,7 +27,13 @@ import { ItemsNavigationComponent } from './items-navigation/items-navigation.co
     SummeryPipe,
     FavoriteComponent,
     bootstrapPanelComponent,
-    ItemsNavigationComponent
+    ItemsNavigationComponent,
+    RecipeListComponent,
+    RecipeDetailsComponent,
+    RecipeEditComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
